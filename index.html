@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Jogo Adivinha o Número</title>
+</head>
+<body>
+  <div id="game-container">
+    <h1>Jogo Adivinha o Número</h1>
+    <label for="player-name">Nome:</label>
+    <input type="text" id="player-name">
+    <div id="balance-container">
+      <p>Saldo: €<span id="balance">100</span></p>
+      <label for="add-balance">Adicionar Saldo:</label>
+      <select id="add-balance">
+        <option value="1" data-image="Imagem/1 euro.png">€1</option>
+        <option value="5" data-image="Imagem/5 euro.png">€5</option>
+        <option value="10" data-image="Imagem/10 euro.png">€10</option>
+      </select>
+      <button onclick="addBalance()">Adicionar</button>
+    </div>
+    <div id="selected-note-container" class="hidden">
+      <p>Nota Selecionada:</p>
+      <img id="selected-note-image" alt="Nota Selecionada">
+    </div>
+    <form id="guess-form" onsubmit="makeGuess(); return false;">
+      <label for="guess">Seu Palpite:</label>
+      <input type="number" id="guess" min="1" max="10" required>
+      <label for="bet">Valor da Aposta:</label>
+      <input type="number" id="bet" min="1" max="100" required>
+      <label for="hints">Ativar Dicas:</label>
+      <input type="checkbox" id="hints" checked>
+      <button type="submit" id="guess-btn">Fazer Palpite</button>
+    </form>
+    <div id="result-container">
+      <p>Tentativas: <span id="attempts">0</span></p>
+      <p>Histórico:</p>
+      <table id="history">
+        <tr>
+          <th>Palpite</th>
+          <th>Aposta</th>
+          <th>Resultado</th>
+          <th>Dica</th>
+        </tr>
+      </table>
+    </div>
+    <div id="cheque-container" class="hidden">
+      <h2>Parabéns!</h2>
+      <p id="cheque-text"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

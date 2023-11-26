@@ -1,0 +1,70 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+  }
+  
+  #game-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  #balance-container {
+    margin-bottom: 20px;
+  }
+  
+  #history {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+  }
+  
+  #history th, #history td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #history th {
+    background-color: #f2f2f2;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #cheque-container {
+    margin-top: 20px;
+  }
+  
+  #cheque-container h2 {
+    color: green;
+  }
+  
+  #cheque-container p {
+    font-size: 18px;
+  }
+  
+  #cheque-container h2 {
+    color: green;
+  }
+  
+  #cheque-container p {
+    font-size: 18px;
+  }
+  
+  #selected-note-container {
+    margin-top: 20px;
+  }
+  
+  #selected-note-image {
+    max-width: 100px;
+    max-height: 100px;
+  }
